@@ -1,0 +1,643 @@
+/* style.css */
+
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+main {
+    flex: 1; /* Faz o main ocupar o espaço restante, empurrando o footer para o final */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f7f7f7;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header e Navegação */
+header {
+    background-color: #be193c; /* Marrom-chocolate */
+    color: white;
+    padding: 1em 0;
+    border-bottom: 5px solid #d2b48c; /* Bege-claro */
+}
+
+header .logo h1 {
+    font-size: 2.5em;
+    text-align: center;
+}
+
+header .logo p {
+    text-align: center;
+    font-style: italic;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+    padding: 10px 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #69300a;
+}
+
+/* Main Content */
+main {
+    padding: 2em 0;
+}
+
+section {
+    background-color: white;
+    margin-bottom: 2em;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #8b4513;
+    border-bottom: 2px solid #d2b48c;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Botão Principal */
+.botao-principal {
+    display: inline-block;
+    background-color: #ff6347; /* Vermelho-tomate */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+}
+
+.botao-principal:hover {
+    background-color: #e55338;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    margin-top: 20px;
+}
+
+/* Ajustes no Footer para layout flexível */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.instagram-link {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.3s;
+}
+
+.instagram-link:hover {
+    color: #ff6347; /* Cor de destaque ao passar o mouse */
+}
+
+.instagram-link img {
+    transition: opacity 0.3s;
+}
+
+.instagram-link:hover img {
+    opacity: 0.8; /* Leve fade ao passar o mouse */
+}
+
+
+/* Estilos específicos para o formulário de contato (contato.html) */
+form {
+    display: grid;
+    gap: 15px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input:not([type="submit"]), textarea, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+input[type="submit"] {
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1em;
+}
+
+input[type="submit"]:hover {
+    background-color: #e55338;
+}
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------ */
+
+
+
+
+/* --- Estilos para a Galeria de Produtos (produtos.html) --- */
+
+.galeria-doces {
+    display: flex; /* Habilita o layout flexível */
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+    gap: 20px; /* Espaçamento entre os itens */
+    justify-content: center; /* Centraliza os itens na linha */
+    margin-top: 30px;
+}
+
+.doce-item {
+    flex-basis: 300px; /* Define uma largura base para cada item */
+    text-align: center;
+    background-color: white;
+    border: 1px solid #d2b48c;
+    border-radius: 8px;
+    overflow: hidden; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.doce-item:hover {
+    transform: translateY(-5px); /* Efeito de flutuação */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.doce-item a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: inherit; 
+    display: block; 
+}
+
+.doce-item img {
+    width: 100%; 
+    height: 200px; /* Altura fixa para as miniaturas */
+    object-fit: cover; /* Garante que a imagem preencha sem distorcer */
+    border-bottom: 1px solid #d2b48c;
+}
+
+.doce-item figcaption {
+    padding: 15px;
+    font-weight: bold;
+    color: #8b4513; /* Cor do nome do doce */
+}
+
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------ */
+
+
+
+
+/* ============================================
+   ESTILOS DO CARRINHO DE COMPRAS
+   ============================================ */
+
+/* Badge Flutuante do Carrinho */
+.badge-carrinho {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: linear-gradient(135deg, #be193c 0%, #8b4513 100%);
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    z-index: 999;
+    transition: all 0.2s;
+    text-decoration: none;
+}
+
+.badge-carrinho:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(190, 25, 60, 0.5);
+}
+
+.badge-carrinho-icon {
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+#contadorBadge {
+    font-size: 0.8rem;
+    margin-top: 2px;
+}
+
+/* Botão Adicionar ao Carrinho */
+.btn-adicionar-carrinho {
+    background: linear-gradient(135deg, #ff6347 0%, #be193c 100%);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 1rem;
+    transition: all 0.3s;
+}
+
+.btn-adicionar-carrinho:hover {
+    background: linear-gradient(135deg, #e55338 0%, #8b4513 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 99, 71, 0.4);
+}
+
+.btn-adicionar-carrinho:active {
+    transform: translateY(0);
+}
+
+.btn-adicionar-carrinho:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+/* Notificação do Carrinho */
+.notificacao-carrinho {
+    position: fixed;
+    top: 100px;
+    right: 2rem;
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    animation: slideInRight 0.3s ease-out;
+    z-index: 1000;
+    transition: all 0.3s;
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Header do Carrinho */
+.carrinho-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.contador-itens {
+    background: #be193c;
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+/* Carrinho Vazio */
+.carrinho-vazio {
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.carrinho-vazio svg {
+    width: 120px;
+    height: 120px;
+    opacity: 0.3;
+    margin-bottom: 1rem;
+}
+
+.carrinho-vazio h3 {
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.carrinho-vazio a {
+    display: inline-block;
+    background-color: #ff6347;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 1rem;
+    transition: background-color 0.3s;
+}
+
+.carrinho-vazio a:hover {
+    background-color: #e55338;
+}
+
+/* Itens do Carrinho */
+.itens-carrinho {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.item-carrinho {
+    background: #f7f7f7;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 2px solid #d2b48c;
+    display: grid;
+    grid-template-columns: 100px 1fr auto;
+    gap: 1.5rem;
+    align-items: center;
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.item-imagem {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid #d2b48c;
+}
+
+.item-info h3 {
+    color: #8b4513;
+    margin-bottom: 0.5rem;
+}
+
+.item-detalhes {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.item-preco {
+    color: #be193c;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.item-acoes {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-end;
+}
+
+/* Controle de Quantidade */
+.quantidade-controle {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: white;
+    padding: 0.5rem;
+    border-radius: 8px;
+    border: 1px solid #d2b48c;
+}
+
+.quantidade-controle button {
+    background: #be193c;
+    color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background 0.3s;
+}
+
+.quantidade-controle button:hover {
+    background: #8b4513;
+}
+
+.quantidade-controle span {
+    min-width: 30px;
+    text-align: center;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Botão Remover */
+.btn-remover {
+    background: #ff4757;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-remover:hover {
+    background: #e84118;
+}
+
+/* Layout Grid do Carrinho */
+.grid-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+}
+
+/* Resumo do Carrinho */
+.resumo-carrinho {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    border: 2px solid #d2b48c;
+    position: sticky;
+    top: 2rem;
+}
+
+.resumo-carrinho h3 {
+    color: #8b4513;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #d2b48c;
+    padding-bottom: 10px;
+}
+
+.resumo-linha {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.resumo-total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #be193c;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 2px solid #be193c;
+}
+
+/* Botões do Resumo */
+.btn-finalizar {
+    width: 100%;
+    background: linear-gradient(135deg, #ff6347 0%, #be193c 100%);
+    color: white;
+    border: none;
+    padding: 1.2rem;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    transition: all 0.3s;
+}
+
+.btn-finalizar:hover {
+    background: linear-gradient(135deg, #e55338 0%, #8b4513 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 99, 71, 0.4);
+}
+
+.btn-continuar {
+    width: 100%;
+    background: white;
+    color: #be193c;
+    border: 2px solid #be193c;
+    padding: 1rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: all 0.3s;
+}
+
+.btn-continuar:hover {
+    background: #be193c;
+    color: white;
+}
+
+/* Destaque de Preço */
+.preco-destaque {
+    font-size: 2rem;
+    color: #be193c;
+    font-weight: bold;
+    margin: 1.5rem 0;
+    text-align: center;
+    background: linear-gradient(135deg, #ffe8f0 0%, #fff5f8 100%);
+    padding: 1rem;
+    border-radius: 8px;
+    border: 2px solid #d2b48c;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .badge-carrinho {
+        width: 50px;
+        height: 50px;
+        top: 10px;
+        right: 10px;
+    }
+    
+    .badge-carrinho-icon {
+        font-size: 1.2rem;
+    }
+    
+    #contadorBadge {
+        font-size: 0.7rem;
+    }
+
+    .grid-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .item-carrinho {
+        grid-template-columns: 80px 1fr;
+        gap: 1rem;
+    }
+
+    .item-acoes {
+        grid-column: 1 / -1;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .carrinho-header {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+}
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------ */
+
+
+.info-doce img{
+    width: 100%;
+    height: 250px; /* Altura mediana e visível, uniforme para todas */
+    object-fit: cover; /* Mantém proporção sem distorcer */
+    border-bottom: 1px solid #d2b48c;
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Morango do Amor - Amor aos Pedaços</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Badge Flutuante do Carrinho -->
+  <a href="carrinho.html" class="badge-carrinho" title="Ver Carrinho">
+    <div class="badge-carrinho-icon">🛒</div>
+    <span id="contadorBadge">0</span>
+  </a>
+
+  <header>
+    <div class="logo">
+      <h1>Amor aos Pedaços</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="produtos.html">Produtos</a></li>
+        <li><a href="contato.html">Contato</a></li>
+        <li><a href="orçamento.html">Orçamento</a></li>
+        <li><a href="carrinho.html">Carrinho</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section id="detalhes-doce">
+      <article class="info-doce">
+        <h2>Morango do Amor</h2>
+
+        <figure>
+          <img
+            src="img/morango_do_amor_02.png"
+            alt="Foto de um morango do amor"
+            style="max-width: 100%; height: auto; border-radius: 8px"
+          />
+          <figcaption>
+            A doçura do caramelo com o azedinho do morango
+          </figcaption>
+        </figure>
+
+        <div class="preco-destaque">
+          R$ 12,00 
+          <span style="font-size: 1rem; display: block; margin-top: 0.5rem; font-weight: normal;">
+            por unidade
+          </span>
+        </div>
+
+        <h3>Descrição</h3>
+        <p>
+          Um delicioso e elegante Morango do Amor, com uma cascaquinha de
+          açúcar com corante vermelho, crocante por fora e macio por
+          dentro, envolto num brigadeiro branco de leite ninho.
+        </p>
+
+        <h3>Ingredientes</h3>
+        <ul>
+          <li>Morango</li>
+          <li>Açúcar Refinado</li>
+          <li>Corante vermelho</li>
+          <li>Creme de Leite Fresco</li>
+          <li>Leite condensado</li>
+          <li>Leite ninho</li>
+        </ul>
+      </article>
+
+      <article class="compra-doce">
+        <h3>Comprar Morango do Amor</h3>
+        
+        <form id="formProduto" onsubmit="adicionarAoCarrinho(event, 'morango_amor')">
+          <label for="quantidade">Quantidade de morangos:</label>
+          <input 
+            type="number" 
+            id="quantidade" 
+            name="quantidade" 
+            min="1" 
+            max="50"
+            value="1" 
+            required 
+            placeholder="Mínimo: 1 | Máximo: 50"
+          />
+          
+          <label for="observacoes">Observações (ex.: data de entrega, embalagem especial):</label>
+          <textarea 
+            id="observacoes" 
+            name="observacoes" 
+            rows="4"
+            placeholder="Digite aqui suas observações..."
+          ></textarea>
+          
+          <button type="submit" class="btn-adicionar-carrinho">
+            🛒 Adicionar ao Carrinho
+          </button>
+          
+          <div style="margin-top: 1rem; padding: 1rem; background: #fff3cd; border-radius: 6px; font-size: 0.9rem; border: 1px solid #d2b48c;">
+            <strong>💡 Dica:</strong> Encomende com pelo menos 48h de antecedência para garantir o frescor!
+          </div>
+        </form>
+        
+        <p style="margin-top: 15px; font-size: 0.9em; color: #666; text-align: center;">
+          Após adicionar ao carrinho, você pode continuar comprando ou 
+          <a href="carrinho.html" style="color: #be193c; font-weight: bold;">finalizar o pedido</a>.
+        </p>
+      </article>
+    </section>
+  </main>
+
+      <footer>
+  <div class="footer-content">
+    <p>&copy; 2025 Amor aos Pedaços. Todos os direitos reservados.</p>
+        <a href="https://www.instagram.com/seu_perfil_aqui" target="_blank" class="instagram-link" title="Siga-nos no Instagram">
+  <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" style="width: 27px; height: 27px;">
+        </a>
+  </div>
+      </footer>
+
+  <script src="js/produto.js"></script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Orçamento Personalizado - Amor aos Pedaços</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <h1>Amor aos Pedaços</h1>
+        <p>Doces Caseiros & Artesanais</p>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="produtos.html">Produtos</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="orçamento.html">Orçamento</a></li>
+          <li><a href="carrinho.html">Carrinho</a></li>
+
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section id="dados-contato">
+        <h2>Solicite seu Orçamento</h2>
+        <h3>Amor aos Pedaços</h3>
+        <p>
+          <strong>Endereço:</strong> Rua da Doçura, 100, Bairro Sabor, Cidade
+          Doce - SP
+        </p>
+        <p>
+          <strong>E-mail Comercial:</strong>
+          <a href="mailto:amoraospedacos@comercial.com.br"
+            >amoraospedacos@comercial.com.br</a
+          >
+        </p>
+        <p>
+          <strong>Telefone:</strong>
+          <a href="tel:+551199999999">(011) 9999-9999</a>
+        </p>
+        <p>
+          Preencha o formulário abaixo para solicitar um orçamento personalizado.
+          Responderemos com detalhes o mais rápido possível!
+        </p>
+      </section>
+
+      <section id="formulario">
+        <h2>Formulário de Orçamento</h2>
+        <form action="#" method="post">
+          <p>Selecione os produtos e forneça detalhes para seu orçamento.</p>
+
+          <label for="nome">Nome Completo (Obrigatório):</label>
+          <input type="text" id="nome" name="nome" required />
+
+          <label for="email">E-mail (Obrigatório):</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="telefone"
+            >Telefone (Obrigatório - Ex: (99) 99999-9999):</label
+          >
+          <input
+            type="tel"
+            id="telefone"
+            name="telefone"
+            required
+            pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}"
+            placeholder="(11) 99999-9999"
+          />
+
+          <label for="produto">Produto Desejado:</label>
+          <select id="produto" name="produto" required>
+            <option value="">Selecione um produto</option>
+            <option value="bolo_prestigio">Bolo Prestígio</option>
+            <option value="bolo_marshmallow">Bolo de Marshmallow</option>
+            <option value="torta_cookie">Torta Cookie (Nutella)</option>
+            <option value="bolo_aniversario">Bolo de Aniversário</option>
+            <option value="pavlova">Pavlova</option>
+            <option value="bombom_nutella">Bombom Nutella</option>
+            <option value="morango_amor">Morango do Amor</option>
+            <option value="outro">Outro (especifique na mensagem)</option>
+          </select>
+
+          <label for="quantidade">Quantidade:</label>
+          <input type="number" id="quantidade" name="quantidade" min="1" value="1" />
+
+          <label for="tamanho">Tamanho:</label>
+          <select id="tamanho" name="tamanho">
+            <option value="pequeno">Pequeno (6-8 pessoas)</option>
+            <option value="medio">Médio (10-12 pessoas)</option>
+            <option value="grande">Grande (15-20 pessoas)</option>
+            <option value="personalizado">Personalizado (especifique)</option>
+          </select>
+
+          <label for="data_entrega">Data de Entrega Desejada:</label>
+          <input type="date" id="data_entrega" name="data_entrega" />
+
+          <label for="mensagem">Detalhes Adicionais (Personalizações, Observações):</label>
+          <textarea id="mensagem" name="mensagem" rows="5" placeholder="Ex.: Tema, decoração, restrições alimentares, etc."></textarea>
+
+          <input type="submit" value="Solicitar Orçamento" />
+        </form>
+      </section>
+    </main>
+
+      <footer>
+  <div class="footer-content">
+    <p>&copy; 2025 Amor aos Pedaços. Todos os direitos reservados.</p>
+        <a href="https://www.instagram.com/seu_perfil_aqui" target="_blank" class="instagram-link" title="Siga-nos no Instagram">
+  <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" style="width: 27px; height: 27px;">
+        </a>
+  </div>
+      </footer>
+      
+    <script src="js/script.js"></script>
+  </body>
+</html>

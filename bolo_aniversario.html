@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bolo de aniversário - Amor aos Pedaços</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Badge Flutuante do Carrinho -->
+  <a href="carrinho.html" class="badge-carrinho" title="Ver Carrinho">
+    <div class="badge-carrinho-icon">🛒</div>
+    <span id="contadorBadge">0</span>
+  </a>
+
+  <header>
+    <div class="logo">
+      <h1>Amor aos Pedaços</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="produtos.html">Produtos</a></li>
+        <li><a href="contato.html">Contato</a></li>
+        <li><a href="orçamento.html">Orçamento</a></li>
+        <li><a href="carrinho.html">Carrinho</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section id="detalhes-doce">
+      <article class="info-doce">
+        <h2>Bolo de aniversário</h2>
+
+        <figure>
+          <img
+            src="img/bolo_de_aniversario_02.png"
+            alt="Foto de um bolo de aniversário"
+            style="max-width: 100%; height: auto; border-radius: 8px"
+          />
+          <figcaption>Bolo de aniversário recheado com ganache</figcaption>
+        </figure>
+
+        <h3>Descrição</h3>
+        <p>
+          Um delicioso e elegante Bolo de aniversário, com um cremoso
+          chantilly por fora e uma ganache de chocolate amargo como recheio,
+          um mix vibrante de frutas vermelhas frescas, a sua escolha (morango,
+          mirtilo e amora).
+        </p>
+
+        <h3>Ingredientes</h3>
+        <ul>
+          <li>Claras de Ovos Caipiras</li>
+          <li>Açúcar Refinado</li>
+          <li>Chocolate amargo</li>
+          <li>Creme de Leite Fresco</li>
+          <li>Baunilha Pura</li>
+          <li>fermento</li>
+          <li>Frutas Vermelhas (Morango, Mirtilo, Amora)</li>
+        </ul>
+      </article>
+
+      <article class="compra-doce">
+        <h3>Comprar Bolo de Aniversário</h3>
+        
+        <form id="formProduto" onsubmit="adicionarAoCarrinho(event, 'bolo_aniversario')">
+          <label for="quantidade">Quantidade:</label>
+          <input type="number" id="quantidade" name="quantidade" min="1" value="1" required />
+          
+          <label for="tamanho">Tamanho:</label>
+          <select id="tamanho" name="tamanho" required>
+            <option value="pequeno">Pequeno (6-8 pessoas) - R$ 100,00</option>
+            <option value="medio">Médio (10-12 pessoas) - R$ 120,00</option>
+            <option value="grande">Grande (15-20 pessoas) - R$ 150,00</option>
+          </select>
+          
+          <label for="observacoes">Observações (ex.: data de entrega, personalizações):</label>
+          <textarea id="observacoes" name="observacoes" rows="4"></textarea>
+          
+          <button type="submit" class="btn-adicionar-carrinho">
+            🛒 Adicionar ao Carrinho
+          </button>
+        </form>
+        
+        <p style="margin-top: 15px; font-size: 0.9em; color: #666; text-align: center;">
+          Após adicionar ao carrinho, você pode continuar comprando ou 
+          <a href="carrinho.html" style="color: #be193c; font-weight: bold;">finalizar o pedido</a>.
+        </p>
+      </article>
+    </section>
+  </main>
+
+      <footer>
+  <div class="footer-content">
+    <p>&copy; 2025 Amor aos Pedaços. Todos os direitos reservados.</p>
+        <a href="https://www.instagram.com/seu_perfil_aqui" target="_blank" class="instagram-link" title="Siga-nos no Instagram">
+  <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" style="width: 27px; height: 27px;">
+        </a>
+  </div>
+      </footer>
+
+  <script src="js/produto.js"></script>
+</body>
+</html>
