@@ -641,3 +641,48 @@ input[type="submit"]:hover {
     object-fit: cover; /* Mantém proporção sem distorcer */
     border-bottom: 1px solid #d2b48c;
 }
+
+
+/* -----------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+/* VIDEO */
+
+      .video-section {
+        max-width: 800px;
+        margin: 40px auto;
+        padding: 20px;
+        text-align: center;
+      }
+
+      .video-section h2 {
+        margin-bottom: 20px;
+        color: #333;
+      }
+
+      .video-container {
+        position: relative;
+        width: 100%;
+        max-width: 700px;
+        margin: 0 auto;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .video-container video {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      @media (max-width: 768px) {
+        .video-section {
+          padding: 20px 15px;
+        }
+
+        .video-container {
+          max-width: 100%;
+        }
+      }
